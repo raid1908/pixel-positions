@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pixel Positions</title>
-    @vite(['resources/css/app.css','resources/js/app.js'])
+    @vite(['resources/js/app.js'])
 </head>
 <body class="text-white bg-black">
     <header class="flex justify-between items-center px-10 py-4 border-b border-white/10">
@@ -23,7 +23,7 @@
             <a href="#">Post a Job</a>
         </div>
     </header>
-    <main class="mt-10 max-w-[1400px] m-auto">
+    <main class="mt-10 max-w-[75%] m-auto">
         {{$slot}}
     </main>
     <footer>

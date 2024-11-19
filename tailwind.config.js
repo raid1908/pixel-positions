@@ -17,6 +17,13 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            fontSize: {
+                '2xs' : '.625rem',
+                'xxl' : '1.5rem'
+            },
+            fontWeight : {
+                'bold' : '600',
+            }
         },
     },
     plugins: [],
