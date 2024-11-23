@@ -2,14 +2,19 @@
     <div class="space-y-10">
         <section class="text-center mt-6">
             <h1 class="font-bold text-4xl">Let`s find your next job</h1>
-            <form action="" class="mt-6 max-w-[75%] m-auto">
-                <input type="text" placeholder="Web Developer..." class="rounded-xl text-white border bg-white/5 border-white/10 px-5 py-5 w-full">
-            </form>
+{{--            <form action="" class="mt-6 max-w-[75%] m-auto">--}}
+{{--                <input type="text" placeholder="Web Developer..." class="rounded-xl text-white border bg-white/5 border-white/10 px-5 py-5 w-full">--}}
+{{--            </form>--}}
+
+            <x-forms.form method="GET" action="/search" class="mt-6 max-w-[75%] m-auto">
+                <x-forms.input :label="false" name="q" placeholder="Web Developer..."></x-forms.input>
+                <x-forms.button>Search</x-forms.button>
+            </x-forms.form>
         </section>
         <section class="pt-6">
             <x-section-heading class="mb-6">Featured Jobs</x-section-heading>
             <div class="grid lg:grid-cols-3 gap-8 ">
-                @foreach($jobs as $job)
+                @foreach($featuredjobs as $job)
                     <x-job-card :job="$job"></x-job-card>
                 @endforeach
             </div>
